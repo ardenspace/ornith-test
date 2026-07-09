@@ -30,3 +30,5 @@ version: 1
 - verifier: PASS — full tests passed (6 tests); CLI subprocess criteria covered; mechanical failed-first stashing `loglens/__main__.py` failed as expected and stash restored cleanly; no scope creep found.
 - spec-concern: [security] Input is read fully with `Path.read_text(...)`, so hostile oversized files could cause memory/resource pressure; approved spec leaves this as non-blocking for sample-only v1.
 - files: loglens/__main__.py, tests/test_cli_text.py
+
+## [phase 1] verified — pytest passed (6/6); `python -m loglens sample.ndjson` exited 0 with 3 non-empty stdout lines containing exact expected `level_counts`, `top_path`, and `p95_duration` values.
