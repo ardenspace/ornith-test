@@ -1,6 +1,6 @@
 # Loopspace State
 version: 1
-run_status: executing
+run_status: complete
 harness: generic
 tier: C
 current_phase: 2

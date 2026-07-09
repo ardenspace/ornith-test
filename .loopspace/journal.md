@@ -59,3 +59,9 @@ version: 1
 ## [phase 2] verified — pytest passed (18/18); valid text and JSON invocations exited 0; specified invalid inputs exited non-zero with required stderr; scope guards passed.
 - structure-note: Untracked `.opencode/` exists from earlier tool use and is intentionally outside committed loopspace/project files.
 - spec-concern: Existing directory/unreadable input paths remain outside the explicit v1 invalid-input requirements and acceptance checks.
+
+## [run complete] LogLens MVP complete
+- tasks: 5 done
+- retries: task 1.2 required 2 failed attempts before passing on attempt 3; all other tasks passed on attempt 1
+- re-plans: none
+- final verification: phase 2 passed with 18/18 pytest tests and valid text/json CLI checks
