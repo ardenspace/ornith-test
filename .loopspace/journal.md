@@ -32,3 +32,10 @@ version: 1
 - files: loglens/__main__.py, tests/test_cli_text.py
 
 ## [phase 1] verified — pytest passed (6/6); `python -m loglens sample.ndjson` exited 0 with 3 non-empty stdout lines containing exact expected `level_counts`, `top_path`, and `p95_duration` values.
+
+## [2.1] attempt 1 — PASS
+- implementer: Implemented `--json` CLI output mode with exact schema and sample summary expectations.
+- approach: Added failing JSON CLI test first, then minimally extended argparse/output path while preserving text mode.
+- tdd-evidence: tests/test_cli_json.py: failed-first confirmed with `unrecognized arguments: --json`.
+- verifier: PASS — full pytest passed (7 tests); JSON mode exits 0, parses with `json.loads`, has exact top-level keys/types, and matches committed sample summary.
+- files: loglens/__main__.py, tests/test_cli_json.py

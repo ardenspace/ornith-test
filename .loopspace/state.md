@@ -3,11 +3,11 @@ version: 1
 run_status: executing
 harness: generic
 tier: C
-current_phase: 1
-current_task: 1.2
+current_phase: 2
+current_task: 2.1
 base_branch: main
 run_branch: loopspace/loglens/run
-current_branch: loopspace/loglens/phase-1
+current_branch: loopspace/loglens/phase-2
 
 ## Project Facts
 - test: python -m pytest
@@ -19,6 +19,6 @@ current_branch: loopspace/loglens/phase-1
 |-----|---------|----------|-------|
 | 1.1 | done    | 1        | light |
 | 1.2 | done    | 3        | heavy |
-| 2.1 | pending | 0        | light |
+| 2.1 | done    | 1        | light |
 | 2.2 | pending | 0        | heavy |
 | 2.3 | pending | 0        | light |
