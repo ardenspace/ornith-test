@@ -4,12 +4,14 @@ written: 2026-07-09
 trigger: phase-boundary
 
 ## Where we are
-Phase 1 is verified complete. Tasks 1.1 and 1.2 are done on branch `loopspace/loglens/phase-1`; next work is Phase 2 starting with task 2.1 JSON output mode.
+Phase 2 is verified complete and this was the last planned phase. The run is ready to be marked complete.
 
 ## Next session must know
-- Current CLI text path works: `python -m loglens sample.ndjson` prints 3 lines: `level_counts`, `top_path`, `p95_duration`.
-- Full pytest suite passed with 6 tests at phase 1 verification.
-- Task 1.2 required two retries because broad substring assertions for p95 and top path were tightened to exact line assertions.
+- Full pytest suite passed with 18 tests at final phase verification.
+- Valid text invocation works: `python -m loglens sample.ndjson`.
+- Valid JSON invocation works: `python -m loglens --json sample.ndjson`.
+- Invalid input behavior and R16 scope guards are covered by tests.
 
 ## Watch out for
-- Security reviewers noted a non-blocking spec concern: the CLI currently reads the whole input file into memory with `Path.read_text(...)`; approved v1 is sample-only and has no max size requirement.
+- Non-blocking spec concern: directory/unreadable input paths remain outside explicit v1 invalid-input requirements and acceptance checks.
+- Non-blocking spec concern repeated during run: local sample-only CLI reads whole files into memory; approved spec has no size limits.

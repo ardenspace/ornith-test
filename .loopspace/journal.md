@@ -55,3 +55,7 @@ version: 1
 - tdd-evidence: tests/test_scope_guard.py: guard tests passed immediately (`6 passed`) because existing implementation already satisfied the scope guard.
 - verifier: PASS — full pytest passed (18 tests); guard tests map to R16; help and multi-file behavior verified; changed-file secret scan clean.
 - files: tests/test_scope_guard.py
+
+## [phase 2] verified — pytest passed (18/18); valid text and JSON invocations exited 0; specified invalid inputs exited non-zero with required stderr; scope guards passed.
+- structure-note: Untracked `.opencode/` exists from earlier tool use and is intentionally outside committed loopspace/project files.
+- spec-concern: Existing directory/unreadable input paths remain outside the explicit v1 invalid-input requirements and acceptance checks.
