@@ -7,7 +7,7 @@ current_phase: 1
 current_task: 1.1
 base_branch: main
 run_branch: loopspace/loglens/run
-current_branch: loopspace/loglens/run
+current_branch: loopspace/loglens/phase-1
 
 ## Project Facts
 - test: python -m pytest
@@ -17,7 +17,7 @@ current_branch: loopspace/loglens/run
 ## Tasks
 | id  | status  | attempts | risk  |
 |-----|---------|----------|-------|
-| 1.1 | pending | 0        | light |
+| 1.1 | done    | 1        | light |
 | 1.2 | pending | 0        | heavy |
 | 2.1 | pending | 0        | light |
 | 2.2 | pending | 0        | heavy |
