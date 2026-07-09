@@ -39,3 +39,12 @@ version: 1
 - tdd-evidence: tests/test_cli_json.py: failed-first confirmed with `unrecognized arguments: --json`.
 - verifier: PASS — full pytest passed (7 tests); JSON mode exits 0, parses with `json.loads`, has exact top-level keys/types, and matches committed sample summary.
 - files: loglens/__main__.py, tests/test_cli_json.py
+
+## [2.2] attempt 1 — PASS
+- implementer: Implemented CLI input failure handling for missing files, malformed JSON, blank lines, invalid records, and empty files.
+- approach: Added failing CLI error tests first, then implemented minimal validation/error reporting in load path and record validation.
+- tdd-evidence: tests/test_cli_errors.py: failed-first confirmed with `tests/test_cli_errors.py FFFFF [100%]`.
+- panel: security PASS / test-integrity PASS / correctness PASS
+- verifier: PASS — full pytest passed; task 2.2 criteria covered; mechanical failed-first produced 5 failures with implementation files stashed and restored cleanly.
+- spec-concern: [security] Large-file memory exhaustion remains theoretically possible because the local sample-only CLI reads whole files; approved spec has no size limit.
+- files: loglens/__main__.py, loglens/core.py, tests/test_cli_errors.py

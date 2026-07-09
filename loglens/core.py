@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from dataclasses import dataclass
-from math import ceil
+from math import ceil, isfinite
 from typing import Iterable, Mapping, Any
 
 
@@ -17,6 +17,19 @@ class Summary:
     level_counts: dict[str, int]
     top_path: TopPath
     p95_duration: int | float
+
+
+def is_valid_record(record: Any) -> bool:
+    if not isinstance(record, Mapping):
+        return False
+    if not isinstance(record.get("level"), str):
+        return False
+    if not isinstance(record.get("path"), str):
+        return False
+    duration = record.get("duration")
+    if isinstance(duration, bool) or not isinstance(duration, (int, float)):
+        return False
+    return isfinite(duration)
 
 
 def aggregate_records(records: Iterable[Mapping[str, Any]]) -> Summary:
