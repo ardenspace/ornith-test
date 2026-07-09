@@ -1,0 +1,4 @@
+{"level":"info","path":"/api/users","duration":10}
+{"level":"error","path":"/api/orders","duration":20}
+{"level":"info","path":"/api/users","duration":30}
+{"level":"warn","path":"/api/health","duration":40}
