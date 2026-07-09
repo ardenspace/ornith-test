@@ -48,3 +48,10 @@ version: 1
 - verifier: PASS — full pytest passed; task 2.2 criteria covered; mechanical failed-first produced 5 failures with implementation files stashed and restored cleanly.
 - spec-concern: [security] Large-file memory exhaustion remains theoretically possible because the local sample-only CLI reads whole files; approved spec has no size limit.
 - files: loglens/__main__.py, loglens/core.py, tests/test_cli_errors.py
+
+## [2.3] attempt 1 — PASS
+- implementer: Added V1 scope guard pytest coverage.
+- approach: Created repository/CLI guard tests only; no CLI implementation change was needed because existing argparse behavior rejects multiple positional files.
+- tdd-evidence: tests/test_scope_guard.py: guard tests passed immediately (`6 passed`) because existing implementation already satisfied the scope guard.
+- verifier: PASS — full pytest passed (18 tests); guard tests map to R16; help and multi-file behavior verified; changed-file secret scan clean.
+- files: tests/test_scope_guard.py
